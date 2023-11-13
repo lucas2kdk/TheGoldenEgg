@@ -73,6 +73,9 @@ enable-player-address-logging = true
 # Configure your servers here. Each key represents the server's name, and the value
 # represents the IP address of the server to connect to.
 lobby = "lobby"
+parkour = "parkour"
+creative = "creative"
+vanilla = "vanilla"
 
 # In what order we should try servers when a player logs in or is kicked from a server.
 
@@ -93,7 +96,7 @@ compression-level = -1
 
 # How fast (in milliseconds) are clients allowed to connect after the last connection? By
 # default, this is three seconds. Disable this by setting this to 0.
-login-ratelimit = 3000
+login-ratelimit = 2000
 
 # Specify a custom timeout for connection timeouts here. The default is five seconds.
 connection-timeout = 5000
