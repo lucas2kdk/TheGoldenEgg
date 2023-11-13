@@ -63,15 +63,15 @@ dependencies {
 }
 
 // TFB Artifactory
-repositories {
-    mavenCentral {
-        url "${MAVEN_URL}"
-        credentials {
-            username = "${MAVEN_USERNAME}"
-            password = "${MAVEN_PASSWORD}"
-        }
-    }
-}
+// repositories {
+//     mavenCentral {
+//         url "${MAVEN_URL}"
+//         credentials {
+//             username = "${MAVEN_USERNAME}"
+//             password = "${MAVEN_PASSWORD}"
+//         }
+//     }
+// }
 
 // Type "gradle plugins" in terminal to update plugins
 task plugins(type: Copy) {
