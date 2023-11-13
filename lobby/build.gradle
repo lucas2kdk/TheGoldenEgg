@@ -4,23 +4,11 @@ plugins {
 }
 
 // Use environment instead of gradle.properties
-// if("$System.env.MAVEN_URL" != null) {
-    // ext.MAVEN_URL="$System.env.MAVEN_URL"+"/"+"plugins"
-    // ext.MAVEN_PASSWORD="$System.env.MAVEN_PASSWORD"
-    // ext.MAVEN_USERNAME="$System.env.MAVEN_USERNAME"
-//}
-
-// In your build.gradle
-repositories {
-    maven {
-        url "https://jfrog.rosenvold.tech/artifactory/plugins"
-        credentials {
-            username = System.getenv("GRADLE_USER")
-            password = System.getenv("GRADLE_TOKEN")
-        }
-    }
+if("$System.env.MAVEN_URL" != null) {
+    ext.MAVEN_URL="$System.env.MAVEN_URL"+"/"+"plugins"
+    ext.MAVEN_PASSWORD="$System.env.MAVEN_PASSWORD"
+    ext.MAVEN_USERNAME="$System.env.MAVEN_USERNAME"
 }
-
 
 dependencies {
     // Network plugins
@@ -63,15 +51,15 @@ dependencies {
 }
 
 // TFB Artifactory
-// repositories {
-//     mavenCentral {
-//         url "${MAVEN_URL}"
-//         credentials {
-//             username = "${MAVEN_USERNAME}"
-//             password = "${MAVEN_PASSWORD}"
-//         }
-//     }
-// }
+repositories {
+    mavenCentral {
+        url "${MAVEN_URL}"
+        credentials {
+            username = "${MAVEN_USERNAME}"
+            password = "${MAVEN_PASSWORD}"
+        }
+    }
+}
 
 // Type "gradle plugins" in terminal to update plugins
 task plugins(type: Copy) {
