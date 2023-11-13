@@ -13,7 +13,7 @@ plugins {
 // In your build.gradle
 repositories {
     maven {
-        url "https://jfrog.rosenvold.tech/artifactory"
+        url "https://jfrog.rosenvold.tech/artifactory/plugins"
         credentials {
             username = System.getenv("GRADLE_USER")
             password = System.getenv("GRADLE_TOKEN")
