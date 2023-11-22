@@ -137,7 +137,7 @@ antibot:
   proxy:
     enabled: true
     log: true
-    firewall: true
+    firewall: false
     online-check: false
     email: flamecord@gmail.com
     whitelist:
